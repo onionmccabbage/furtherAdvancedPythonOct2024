@@ -3,3 +3,106 @@ Further Advanced Python
 October 14-18 2024
 
 Toby Dussek
+
+9:30  start
+11:00 coffee
+12:30 lunch
+3:00  tea break
+4:30  end
+
+repo https://github.com/onionmccabbage/furtherAdvancedPythonOct2024
+
+Monday
+- welcome
+- we will be installing additional packages as needed
+- ABC
+- conventions
+  - as will all languages, identifiers can use letters, numbers and underscore (don't start with a number)
+  - by convention, ClassesUsePascalCase, MethodsUseCaleCase identifiers_use_snake_case
+- constructor pattern
+- design patterns (and anti-patterns)
+- decorator pattern (using @)
+- factory and facade patterns
+- command pattern
+- after lunch review exercise
+- immediate Python
+- proxy pattern
+- observables and subscribers (this is very fashionable just now)
+- we will need Jupyter Notebooks later in the week
+
+Tuesday
+- summary of design patterns
+- functional design
+- state pattern
+- RxPY https://rxpy.readthedocs.io/en/latest/index.html
+       https://rxmarbles.com/
+- concurrency and parallel code
+- the GIL
+  see https://realpython.com/python-gil/
+- thread functions and thread classes
+- how to access the course recordings
+- thread locks/rlocks/semaphores
+- semaphore quantity
+- after lunch review exercise
+
+Wednesday
+- custom thread decorator to make classes and methods thread safe
+- daemon threads, thread events
+- multiprocessing
+- performance and timing
+- profiling with @profile and cProfile
+- demonstrate the 'with' operator in other contexts...
+- after lunch review exercise
+- why use a thread or a process
+- generators
+- prepare for Thursday
+
+Thursday
+- options for Jupyter Notebooks:
+  - use Anaconda
+  - pip install notebook
+  - just use existing VSCode (or similar)
+  - use cloud
+- Python for Data Analysis
+  we will need:
+  - Jupyter notebooks
+  - numpy
+  - pandas
+  - matplotlib
+	The easiest way to get all the bits and bobs is to use Anaconda
+  Data sources (csv, xlsx, text, db, url...)
+- using Jupyter notebooks
+   you can 'pip install jupyter' then start it with 'python -m notebook'
+   then you will also need to pip install numpy, pandas etc.
+- numpy and data structures: the arange and array 
+- pandas: series and data-frame
+  NaN, creating stuctures, analysis (stats)
+- data cleansing and preparation
+- descriptive statistics
+- handling files and remote data
+- after lunch review exercise
+- careful: exporting a notebook does not add 'print' statements
+
+Friday
+- async/await and asyncio
+- data vizualisation with matplotlib
+- statistical analysis and correlation
+  REMEMBER: correlation does NOT prove CAUSATION
+- review of microservices (inc. multi threading)
+- Flask:
+  to run as a debug server: flask --app my_flask.py --debug run
+  or else debug=True in the app declaration
+  see https://flask.palletsprojects.com/en/2.3.x/
+- after lunch review exercise
+- end of course feedback
+  
+
+Some Websites
+   https://www.geeksforgeeks.org/python-design-patterns/
+   https://python-patterns.guide/
+   https://rxpy.readthedocs.io/en/latest/ 
+   https://pypi.org/project/memory-profiler/
+   https://pynative.com/python-exercises-with-solutions/
+   https://www.geeksforgeeks.org/python-exercises-practice-questions-and-solutions/
+   https://www.practicepython.org/exercises/
+
