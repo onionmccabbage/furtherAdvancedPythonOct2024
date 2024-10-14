@@ -44,4 +44,27 @@ class SellyStock(Order):
             raise TypeError('Missing required stock trade instance')
     def execute(self):
         return self.stock.sell() # call a low-level method of our StiockTrade instance
+
+class Agent():
+    '''The agent can issue commands (things to do)'''
+    def __init__(self):
+        self.__order_queue = [] # an empty list
+    def placeOrder(self, order):
+        self.__order_queue.append(order)
+        # this queue of command might be asynchronous, there may be latency
+        order.execute()
+
+def main():
+    ' use our classes to issue commands'
+    stock = StockTrade()
+    buy   = BuyStock(stock)
+    sell  = SellyStock(stock)
+    agent = Agent()
+    # invoke some commands
+    agent.placeOrder(buy)
+    agent.placeOrder(sell)
+
+if __name__ == '__main__':
+    main()
     
+ 
