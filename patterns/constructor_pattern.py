@@ -8,7 +8,9 @@ d = {}
 # if none of the built-in types suit your purpose, construct your own
 e = {'x':7.0, 'y':3.8} # or e = [3,4] e=(5,4)
 
-class Point(): # or class (object): or class Point:
+from abstract_point import Planar
+
+class Point(Planar): # or class (object): or class Point:
     ''' a point in 2-d planar space
     x and y must be numeric'''
     # in Python we tend to allow specific members in our class construct
