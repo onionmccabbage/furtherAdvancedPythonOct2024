@@ -24,13 +24,13 @@ Monday
 > Factory pattern
 > Facade pattern
 > command pattern
-- proxy pattern
+> proxy pattern
 > constructor pattern
 > illustrate call to __repr__ (used in immediate Python also in Jupyter)
 > after lunch review exercise
 > immediate Python
 > Abstract base class
-- observables and subscribers
+> observables and subscribers
 - we will need Jupyter Notebooks later in the week
 
 Tuesday
