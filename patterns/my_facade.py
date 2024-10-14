@@ -63,4 +63,3 @@ class Client():
 if __name__ == '__main__':
     cust = Client()
     cust.askManager()
-
