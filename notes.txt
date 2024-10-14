@@ -20,6 +20,7 @@ Monday
   - by convention, ClassesUsePascalCase, methodsUseCamelCase identifiers_use_snake_case
 - design patterns
 - constructor pattern
+q - illustrate call to __repr__
 - after lunch review exercise
 - immediate Python
 - Abstract base class
