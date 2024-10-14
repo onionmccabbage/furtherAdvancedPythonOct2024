@@ -6,7 +6,7 @@ Toby Dussek
 
 9:30  start
 11:00 coffee
-12:25 lunch
+12:25 lunch until 1:30
 3:00  tea break
 4:30  end
 
@@ -18,10 +18,11 @@ Monday
 - conventions
   - as will all languages, identifiers can use letters, numbers and underscore (don't start with a number)
   - by convention, ClassesUsePascalCase, methodsUseCamelCase identifiers_use_snake_case
-- design patterns - following proven good practices
-- Decorator pattern
+> design patterns - following proven good practices
+> anti-patterns - when things go wrong and you do it again!!!
+> Decorator pattern
 > Factory pattern
-- Facade pattern
+> Facade pattern
 - command pattern
 - proxy pattern
 > constructor pattern

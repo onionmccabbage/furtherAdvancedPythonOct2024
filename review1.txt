@@ -1,0 +1,28 @@
+Beyond Advanced Python Review Exercise 1 50 minutes (until 2:30)
+========================================
+
+Individually or in groups, tackle as many of these challenges as you like, in any order
+There will be a chance to show your thinking after the exercise
+
+At the end please 'show and tell'
+
+Decorator Pattern
+- Write a decorator function that ensures all positional arguments are non-empty string
+  Any positional arguments that fail validation should raise a typeError
+- expand this decorator for other kinds of validation (eg int, float, numeric, instance-of)
+- also validate keyword args
+
+Facade and Factory patterns
+- Write the creature factory example to provide a facade to all the creatures
+- consider if the 'Manager' facade could be sensibly implemented as a factory
+
+Constructor Pattern
+- Write an abstract base class that insists __str__ is implemented
+- Extend all the classes in the 'facade' pattern to implement this base class
+- Write __str__ methods to satisfy this restriction
+
+Built-in Methods
+- We met __str__ , __repr__ and __del__. Now explore other built-in methods of Python objects
+  __enter__ ,  __exit__ , __run__
+
+Or just play with design patterns to implement your own coding solutions
