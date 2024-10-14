@@ -15,7 +15,7 @@ repo https://github.com/onionmccabbage/furtherAdvancedPythonOct2024
 Monday
 > welcome
 - we will be installing additional packages as needed
-- conventions
+> conventions
   - as will all languages, identifiers can use letters, numbers and underscore (don't start with a number)
   - by convention, ClassesUsePascalCase, methodsUseCamelCase identifiers_use_snake_case
 > design patterns - following proven good practices
@@ -35,6 +35,7 @@ Monday
 
 Tuesday
 - how to access the course recordings
+- stateful pattern
 - functional design
 - RxPY https://rxpy.readthedocs.io/en/latest/index.html
        https://rxmarbles.com/

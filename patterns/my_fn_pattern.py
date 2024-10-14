@@ -1,0 +1,1 @@
+# everything we do with classes we can also achieve with pure functional coding
