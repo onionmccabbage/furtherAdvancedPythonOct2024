@@ -23,7 +23,7 @@ Monday
 > Decorator pattern
 > Factory pattern
 > Facade pattern
-- command pattern
+> command pattern
 - proxy pattern
 > constructor pattern
 > illustrate call to __repr__ (used in immediate Python also in Jupyter)
