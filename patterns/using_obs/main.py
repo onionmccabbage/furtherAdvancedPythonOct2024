@@ -4,7 +4,7 @@ from print_sub import PrintSubscriber
 from media_sub import MediaSubscriber
 
 # here we have aa global tuple
-subs_t = (EmailSubscriber, PrintSubscriber, MediaSubscriber)
+subs_t = (EmailSubscriber, PrintSubscriber, MediaSubscriber, EmailSubscriber)
 
 def main():
     '''invoke the parts of our project'''
@@ -12,7 +12,7 @@ def main():
     for subscriber in subs_t:
         subscriber(news_pub)
         # we could usse a separate loop to add news
-        news_pub.add_news('News flash - its nearly time for coffee!!')
+        news_pub.add_news('News flash - its nearly time to finish for the day!!')
     # we can notify all the subscribers
     news_pub.notify_subs() # they all get notified
 
