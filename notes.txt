@@ -19,12 +19,16 @@ Monday
   - as will all languages, identifiers can use letters, numbers and underscore (don't start with a number)
   - by convention, ClassesUsePascalCase, methodsUseCamelCase identifiers_use_snake_case
 - design patterns
-  constructor, singleton, builder, facade, factory, 
+- Decorator pattern
+> Factory pattern
+- Facade pattern
+- command pattern
+- proxy pattern
 > constructor pattern
 q - illustrate call to __repr__
 - after lunch review exercise
 - immediate Python
-- Abstract base class
+> Abstract base class
 - observables and subscribers
 - we will need Jupyter Notebooks later in the week
 
