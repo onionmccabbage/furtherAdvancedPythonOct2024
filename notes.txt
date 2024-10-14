@@ -15,43 +15,38 @@ repo https://github.com/onionmccabbage/furtherAdvancedPythonOct2024
 Monday
 - welcome
 - we will be installing additional packages as needed
-- ABC
 - conventions
   - as will all languages, identifiers can use letters, numbers and underscore (don't start with a number)
-  - by convention, ClassesUsePascalCase, MethodsUseCaleCase identifiers_use_snake_case
+  - by convention, ClassesUsePascalCase, methodsUseCamelCase identifiers_use_snake_case
+- design patterns
 - constructor pattern
-- design patterns (and anti-patterns)
-- decorator pattern (using @)
-- factory and facade patterns
-- command pattern
 - after lunch review exercise
 - immediate Python
-- proxy pattern
-- observables and subscribers (this is very fashionable just now)
+- Abstract base class
+- observables and subscribers
 - we will need Jupyter Notebooks later in the week
 
 Tuesday
-- summary of design patterns
+- how to access the course recordings
 - functional design
-- state pattern
 - RxPY https://rxpy.readthedocs.io/en/latest/index.html
        https://rxmarbles.com/
 - concurrency and parallel code
 - the GIL
   see https://realpython.com/python-gil/
 - thread functions and thread classes
-- how to access the course recordings
 - thread locks/rlocks/semaphores
 - semaphore quantity
 - after lunch review exercise
 
 Wednesday
+- asyncio
 - custom thread decorator to make classes and methods thread safe
 - daemon threads, thread events
 - multiprocessing
 - performance and timing
 - profiling with @profile and cProfile
-- demonstrate the 'with' operator in other contexts...
+- the 'with' operator
 - after lunch review exercise
 - why use a thread or a process
 - generators
@@ -69,9 +64,9 @@ Thursday
   - numpy
   - pandas
   - matplotlib
+- using Jupyter notebooks
 	The easiest way to get all the bits and bobs is to use Anaconda
   Data sources (csv, xlsx, text, db, url...)
-- using Jupyter notebooks
    you can 'pip install jupyter' then start it with 'python -m notebook'
    then you will also need to pip install numpy, pandas etc.
 - numpy and data structures: the arange and array 
@@ -84,7 +79,6 @@ Thursday
 - careful: exporting a notebook does not add 'print' statements
 
 Friday
-- async/await and asyncio
 - data vizualisation with matplotlib
 - statistical analysis and correlation
   REMEMBER: correlation does NOT prove CAUSATION
