@@ -26,9 +26,9 @@ Monday
 - command pattern
 - proxy pattern
 > constructor pattern
-q - illustrate call to __repr__
-- after lunch review exercise
-- immediate Python
+> illustrate call to __repr__ (used in immediate Python also in Jupyter)
+> after lunch review exercise
+> immediate Python
 > Abstract base class
 - observables and subscribers
 - we will need Jupyter Notebooks later in the week
