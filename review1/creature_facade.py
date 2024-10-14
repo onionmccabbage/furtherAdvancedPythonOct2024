@@ -2,6 +2,7 @@ from abc import ABCMeta, abstractmethod
 class Animal(metaclass=ABCMeta):
     def make_a_noise(self):
         pass
+    @abstractmethod
     def __str__(self):
         pass
 
