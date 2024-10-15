@@ -9,6 +9,10 @@ def getWeather(city):
         print(err)
 
 if __name__ == '__main__':
-    print( getWeather('Genoa') )
-    print( getWeather('Galway') )
-    print( getWeather('Paris') )
+    genoa = getWeather('Genoa')
+    galway = getWeather('Galway')
+    paris = getWeather('Paris')
+    # grab parts of each report
+    print( genoa['weather'][0]['description'] ) # access dictionary members with quoted labels
+    print( galway['main']['temp'] )
+    print( paris['wind']['speed'] )
