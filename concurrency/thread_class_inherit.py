@@ -14,13 +14,13 @@ class MyClass(Thread): # we inherit from Thread
 
 def main():
     '''invoke our class as thread target'''
-    t1 = MyClass(1) # we have instances of Thread (our class)
-    t2 = MyClass(2)
-    
-    t1.start()
-    t2.start()
-    t1.join()
-    t2.join()
+    thread_l = []
+    for _ in range(0,512): # we may spawn very many threads without taking much longer
+        thread_l.append(MyClass(_))
+    for thread in thread_l:
+        thread.start()
+    for thread in thread_l:
+        thread.join()
     print('back on the main thread')
 
 if __name__ == '__main__':
