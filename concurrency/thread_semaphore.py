@@ -5,13 +5,13 @@ import time
 import threading
 
 # a global resource
-testAvailable = 1024 # a nice power of two
+testAvailable = 100 # a nice power of two
 
 class TestRunner(threading.Thread):
     '''Use a semaphore to control concurrent access to the tests'''
     testsRun = 0
     def __init__(self, semaph):
-        threading.Threaad.__init__(self)
+        threading.Thread.__init__(self)
         self.__semaph = semaph
     def run(self):
         global testAvailable
