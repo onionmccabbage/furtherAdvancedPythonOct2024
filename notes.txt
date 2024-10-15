@@ -48,7 +48,7 @@ Tuesday
 > thread functions and thread classes
 > thread locks/rlocks/semaphores
 > semaphore quantity
-- after lunch review exercise
+> after lunch review exercise
 
 Wednesday
 - asyncio
