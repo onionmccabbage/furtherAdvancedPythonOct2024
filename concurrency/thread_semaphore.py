@@ -1,11 +1,12 @@
 # semaphores let us specify the maximum number of 
 # threads that may access a resource concurrently
 import random
-import time
+import time # we could use time.time() to measure how long our code takes
+import timeit # this is a more accurate tool for time-difference measurements
 import threading
 
 # a global resource
-testAvailable = 100 # a nice power of two
+testAvailable = 1024 # a nice power of two
 
 class TestRunner(threading.Thread):
     '''Use a semaphore to control concurrent access to the tests'''
@@ -29,18 +30,21 @@ class TestRunner(threading.Thread):
         print(f'Test runner {self.getName()} ran {self.testsRun}')
     def randomDelay(self):
         time.sleep(random.randint(0,4)/16) # 0, 0.25, 0.5, 0.75...
-  
+
 def main():
     '''provide a semaphore for concurrent access to the tests being run'''
-    sem = threading.Semaphore(4) # we may choose how many concurrent threads may acces the resource
+    sem = threading.Semaphore(64) # we may choose how many concurrent threads may acces the resource
     runners = []
-    for _ in range(0,4):
+    start = timeit.default_timer()
+    for _ in range(0,512):
         runner = TestRunner(sem)
         runners.append(runner)
         runner.start()
     # once all the threads are running, we may call join()
     for thread in runners:
         thread.join()
+    end = timeit.default_timer()
+    print(f'Total execution time: {end-start}')
 
 if __name__ == '__main__':
     main()
