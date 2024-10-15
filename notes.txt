@@ -38,7 +38,7 @@ Monday
 Tuesday
 > how to access the course recordings
 > architectural patterns: inheritance, composition...
-- stateful pattern
+> stateful pattern
 - functional design
 - RxPY https://rxpy.readthedocs.io/en/latest/index.html
        https://rxmarbles.com/
