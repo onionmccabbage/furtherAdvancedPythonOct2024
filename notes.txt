@@ -11,6 +11,8 @@ Toby Dussek
 4:30  end
 
 repo https://github.com/onionmccabbage/furtherAdvancedPythonOct2024
+course website https://s3.eu-west-1.amazonaws.com/neueda.conygre.com/Sites/Ericsson_Further_Advanced_Python/site/index.html
+recording: student Belfast2024 (available for a week or so)
 
 Monday
 > welcome
@@ -34,7 +36,8 @@ Monday
 - we will need Jupyter Notebooks later in the week
 
 Tuesday
-- how to access the course recordings
+> how to access the course recordings
+> architectural patterns: inheritance, composition...
 - stateful pattern
 - functional design
 - RxPY https://rxpy.readthedocs.io/en/latest/index.html
