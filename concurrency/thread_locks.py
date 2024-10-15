@@ -22,7 +22,7 @@ class TicketSeller(threading.Thread):
         running = True
         while running:
             self.randomDelay() # sleep for a bit
-            self.__lock.acquire()
+            self.__lock.acquire() # exclusively access shared resources
             if ticketsAvailable <=0:
                 running = False
             else:
