@@ -43,9 +43,9 @@ Tuesday
 - RxPY https://rxpy.readthedocs.io/en/latest/index.html
        https://rxmarbles.com/
 - concurrency and parallel code
-- the GIL
+> the GIL
   see https://realpython.com/python-gil/
-- thread functions and thread classes
+> thread functions and thread classes
 - thread locks/rlocks/semaphores
 - semaphore quantity
 - after lunch review exercise
