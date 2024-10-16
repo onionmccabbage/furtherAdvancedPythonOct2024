@@ -1,5 +1,12 @@
 # Fibonacci  1 1 2 3 5 8 13 21...
 # always aim for performant code
+
+# we may use cProfile to grab a profile of any running Python code
+# cProfile is included with Python
+# use it like this:
+# python -m cProfile -o profile_output fib.py
+# this will generate a profile called profile_output
+
 from memory_profiler import profile 
 import timeit
 from functools import reduce
@@ -20,7 +27,9 @@ def fib2(n):
         sequence += (reduce( lambda a,b: a+b, sequence[-2:] ),) # careful - one-member tuple
     return sequence[-1] # access the last member of the collection
 
-if __name__ == '__main__':
+# CAUTION: @profile will significantly affect any time measurements
+# @profile
+def main():
     print('fib')
     limit=32 # this is not too taxing
     # it is best to find an average tme when working on performance
@@ -41,3 +50,7 @@ if __name__ == '__main__':
     end2 = timeit.default_timer()
     print( fib_values_l ) # find the result of the first 4 members of the sequence
     print(f'total: {end2-start2}')
+    # print( fib2(60) ) # under 4 seconds
+
+if __name__ == '__main__':
+    main()
