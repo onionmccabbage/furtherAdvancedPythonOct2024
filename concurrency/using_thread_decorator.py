@@ -9,7 +9,7 @@ def lock_a_method(meth):
     global lock # we may explicitly scope to the global object
     def locked_method(self, *args, **kwargs):
         try:
-            already_locked = meth.getattr('__is_locked') # this will raise an exception if there is no __is_locked
+            already_locked = getattr(meth, '__is_locked') # this will raise an exception if there is no __is_locked
             # raise ValueError('method is already locked')
         except ValueError as err:
             print(err)
@@ -49,7 +49,7 @@ def lock_a_class(meth_list, lock):
     return lambda cls: make_thread_safe(cls, meth_list, lock)
 
 # , 'someMethod'
-@lock_a_class(['add', 'remove'], lock) # apply our decorator     
+@lock_a_class(['add', 'remove', 'someMethod'], lock) # apply our decorator     
 class MySet(set):
     '''this class extends the 'set' data-type, which has 'add' and 'remove' methods'''
     def __init__(self, new_set):

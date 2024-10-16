@@ -52,10 +52,10 @@ Tuesday
 
 Wednesday
 > write thread-safe decorator
-q - what if the method is already locked...
+> what if the method is already locked...
 > custom thread decorator to make classes and methods thread safe
-- the 'with' operator
-- asyncio
+> the 'with' operator
+- asyncio (3.7 or better)
 > daemon threads, thread events
 - multiprocessing
 - why use a thread or a process
@@ -95,7 +95,7 @@ Friday
 - data vizualisation with matplotlib
 - statistical analysis and correlation
   REMEMBER: correlation does NOT prove CAUSATION
-- review of microservices (inc. multi threading)
+- review of microservices (inc. multi threading) and asyncio
 - Flask:
   to run as a debug server: flask --app my_flask.py --debug run
   or else debug=True in the app declaration
