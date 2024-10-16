@@ -17,7 +17,7 @@ def fib2(n):
     sequence = (0,1)
     for _ in range(2, n+2):
         '''NB this does not mutate the existing tuple, it creates a new one'''
-        sequence += (reduce( lambda a,b: a+b, sequence[-2:] ))
+        sequence += (reduce( lambda a,b: a+b, sequence[-2:] ),) # careful - one-member tuple
     return sequence[-1] # access the last member of the collection
 
 if __name__ == '__main__':
@@ -33,7 +33,11 @@ if __name__ == '__main__':
     end1 = timeit.default_timer()
     print( fib_values_l ) # find the result of the first 4 members of the sequence
     print(f'total: {end1-start1}') # about 2 seconds
-    # start2 = timeit.default_timer()
-    # fib2()
-    # end2 = timeit.default_timer()
-    # print(f'total: {end2-start2}')
+    fib_values_l = []
+    start2 = timeit.default_timer()
+    for n in range(2, limit+1):
+        r = fib2(n)
+        fib_values_l.append(r)
+    end2 = timeit.default_timer()
+    print( fib_values_l ) # find the result of the first 4 members of the sequence
+    print(f'total: {end2-start2}')
