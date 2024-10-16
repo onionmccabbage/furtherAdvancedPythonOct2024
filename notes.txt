@@ -55,7 +55,8 @@ Wednesday
 > what if the method is already locked...
 > custom thread decorator to make classes and methods thread safe
 > the 'with' operator
-- asyncio (3.7 or better)
+> asyncio (3.7 or better)
+  see https://docs.python.org/3/library/asyncio-task.html#coroutines
 > daemon threads, thread events
 - multiprocessing
 - why use a thread or a process
