@@ -62,16 +62,17 @@ Wednesday
 > why use a thread or a process
 > performance and timing
 > profiling with @profile and cProfile
-- after lunch review exercise
+> after lunch review exercise
 - generators
 - prepare for Thursday
 
 Thursday
 - options for Jupyter Notebooks:
-  - use Anaconda
+  - use Anaconda (NB it is likely you cannot use the free Anaconda within Ericsson)
   - pip install notebook
   - just use existing VSCode (or similar)
-  - use cloud
+  - use cloud (e.g. colab https://colab.research.google.com/ )
+  - or just write NORMAL python modules
 - Python for Data Analysis
   we will need:
   - Jupyter notebooks
