@@ -2,28 +2,35 @@ import multiprocessing
 import os
 import timeit
 
-def whichProc():
+value = 'this is global'
+
+def whichProc(n):
     '''see which process ID this code is running on'''
-    print( f'Running on process ID {os.getpid()}' )
+    global value
+    value  = n
+    print( f'Running on process ID {os.getpid()} value is {value}' )
 
 if __name__ == '__main__':
     #we can cmpare running on ONE process or many
-    whichProc() # this copy of Python is running on a process
+    whichProc(0) # this copy of Python is running on a process
     start1 = timeit.default_timer()
-    whichProc() 
-    whichProc()
-    whichProc()
-    whichProc()
-    print(f'Sequential took {timeit.default_timer - start1}')
+    whichProc(1) 
+    whichProc(2)
+    whichProc(3)
+    whichProc(4)
+    end1 = timeit.default_timer()
+    print(f'Sequential took {end1 - start1}')
     # next we make a list of separate processes
     procs_l = []
     # all modern computers can run more processes than they have processors (mutliprocessing)
     start2 = timeit.default_timer()
     for n in range(0,4):
         # we invoke a new Process, targetting a function run in that process
-        p = multiprocessing.Process(target=whichProc)
+        p = multiprocessing.Process(target=whichProc, args=(n,))
         procs_l.append(p)
         p.start() # this is where the process begins to run
-    print(f'Parallel took {timeit.default_timer - start2}')
     for _ in procs_l:
         _.join() # optional but good practice
+    
+    end2 = timeit.default_timer()
+    print(f'Parallel took {end2 - start2}')

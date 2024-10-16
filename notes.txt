@@ -58,8 +58,8 @@ Wednesday
 > asyncio (3.7 or better)
   see https://docs.python.org/3/library/asyncio-task.html#coroutines
 > daemon threads, thread events
-- multiprocessing
-- why use a thread or a process
+> multiprocessing
+> why use a thread or a process
 - performance and timing
 - profiling with @profile and cProfile
 - after lunch review exercise
