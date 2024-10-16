@@ -40,7 +40,7 @@ Tuesday
 > architectural patterns: inheritance, composition...
 > stateful pattern
 - functional design
-- RxPY https://rxpy.readthedocs.io/en/latest/index.html
+> RxPY https://rxpy.readthedocs.io/en/latest/index.html
        https://rxmarbles.com/
 - concurrency and parallel code
 > the GIL
@@ -51,15 +51,17 @@ Tuesday
 > after lunch review exercise
 
 Wednesday
-- asyncio
+- write thread-safe decorator
+q - what if the method is already locked...
 - custom thread decorator to make classes and methods thread safe
-- daemon threads, thread events
+- the 'with' operator
+- asyncio
+> daemon threads, thread events
 - multiprocessing
+- why use a thread or a process
 - performance and timing
 - profiling with @profile and cProfile
-- the 'with' operator
 - after lunch review exercise
-- why use a thread or a process
 - generators
 - prepare for Thursday
 
