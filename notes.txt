@@ -51,9 +51,9 @@ Tuesday
 > after lunch review exercise
 
 Wednesday
-- write thread-safe decorator
+> write thread-safe decorator
 q - what if the method is already locked...
-- custom thread decorator to make classes and methods thread safe
+> custom thread decorator to make classes and methods thread safe
 - the 'with' operator
 - asyncio
 > daemon threads, thread events
