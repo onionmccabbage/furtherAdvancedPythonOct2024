@@ -27,6 +27,12 @@ def fib2(n):
         sequence += (reduce( lambda a,b: a+b, sequence[-2:] ),) # careful - one-member tuple
     return sequence[-1] # access the last member of the collection
 
+def fib3(n): # on my laptop this is fastest
+    a, b = 0, 1
+    for _ in range(n):
+        a, b = b, a+b
+    return a
+
 # CAUTION: @profile will significantly affect any time measurements
 # @profile
 def main():
@@ -50,7 +56,21 @@ def main():
     end2 = timeit.default_timer()
     print( fib_values_l ) # find the result of the first 4 members of the sequence
     print(f'total: {end2-start2}')
+    #####
+    fib_values_l = []
+    start3 = timeit.default_timer()
+    for n in range(2, limit+1):
+        r = fib3(n)
+        fib_values_l.append(r)
+    end3 = timeit.default_timer()
+    print( fib_values_l ) # find the result of the first 4 members of the sequence
+    print(f'total: {end3-start3}')
     # print( fib2(60) ) # under 4 seconds
-
+    start4 = timeit.default_timer()
+    print( fib3(100) ) # very fast!!!
+    end4 = timeit.default_timer()
+    print(f'total: {end4-start4}')
+    
 if __name__ == '__main__':
+    '''NB sometimes a different code solution is faster under differing circumstances (lower n)'''
     main()

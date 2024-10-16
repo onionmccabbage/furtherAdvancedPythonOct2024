@@ -1,4 +1,4 @@
-Review 3 - Profiling and Timing 30 min (until tea break) then carry on for ...
+Review 3 - Profiling and Timing 30 more min (until 3:45)
 ===============================
 NB for most accurate results, do this is a separate terminal
 For this exercise, use any of the previous review exercises, or my solutions to those exercises,
