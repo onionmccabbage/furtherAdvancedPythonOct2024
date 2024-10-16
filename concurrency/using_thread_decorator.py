@@ -10,8 +10,11 @@ def lock_a_method(meth):
     def locked_method(self, *args, **kwargs):
         try:
             already_locked = meth.getattr('__is_locked') # this will raise an exception if there is no __is_locked
-            # raise Exception('method is already locked')
-        except Exception as e:
+            # raise ValueError('method is already locked')
+        except ValueError as err:
+            print(err)
+        except Exception as e: # we could read e.message to check...
+            # print(e)
             try:
                 # lock.acquire()
                 # result = meth(self, *args, **kwargs)
@@ -45,12 +48,13 @@ def make_thread_safe(cls, meth_l, lock):
 def lock_a_class(meth_list, lock):
     return lambda cls: make_thread_safe(cls, meth_list, lock)
 
-@lock_a_class(['add', 'remove', 'someMethod'], lock) # apply our decorator     
+# , 'someMethod'
+@lock_a_class(['add', 'remove'], lock) # apply our decorator     
 class MySet(set):
     '''this class extends the 'set' data-type, which has 'add' and 'remove' methods'''
     def __init__(self, new_set):
         set.__init__(self, new_set) # simple ask the 'set' to make a set!
-    # @lock_a_method # use our decorator
+    @lock_a_method # use our decorator
     def someMethod(self, new_value):
         '''this method only allows int values to be added'''
         if type(new_value) == int:
