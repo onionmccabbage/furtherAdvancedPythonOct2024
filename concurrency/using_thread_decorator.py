@@ -6,20 +6,25 @@ lock = Lock()
 
 def lock_a_method(meth):
     '''this can be used as a decorator to apply a lock to any method'''
+    global lock # we may explicitly scope to the global object
     def locked_method(self, *args, **kwargs):
         try:
             already_locked = meth.getattr('__is_locked') # this will raise an exception if there is no __is_locked
             # raise Exception('method is already locked')
         except Exception as e:
             try:
-                with lock:
+                # lock.acquire()
+                # result = meth(self, *args, **kwargs)
+                # lock.release()
+                # return result
+                # 'with' will release the lock when done
+                with lock: # this will access the global lock, since we have no local 'lock'  
                     return meth(self, *args, **kwargs)
             except Exception as e:
                 print(e)
     lock_a_method.__name__ = f'Locked_Method_{meth.__name__}'
     locked_method.__is_locked = True # add an arbitrary property
     return locked_method
-
 
 # next we will write a decorator to lock ALL the methods of a class
 def make_thread_safe(cls, meth_l, lock):
@@ -40,28 +45,29 @@ def make_thread_safe(cls, meth_l, lock):
 def lock_a_class(meth_list, lock):
     return lambda cls: make_thread_safe(cls, meth_list, lock)
 
-@lock_a_class(['add', 'remove','someMethod'], lock) # apply our decorator     
+@lock_a_class(['add', 'remove', 'someMethod'], lock) # apply our decorator     
 class MySet(set):
-    '''this class extens the 'set' data-type, which has 'add' and 'remove' methods'''
+    '''this class extends the 'set' data-type, which has 'add' and 'remove' methods'''
     def __init__(self, new_set):
         set.__init__(self, new_set) # simple ask the 'set' to make a set!
     # @lock_a_method # use our decorator
     def someMethod(self, new_value):
         '''this method only allows int values to be added'''
         if type(new_value) == int:
-            self.add(new_value) # remember, set has an add method
+            super().add(new_value) # remember, set has an add method
         else:
             pass # do nothing!!
 
 def main():
     '''exercise the code - check we may add int members with our someMethod'''
     ms = MySet({3,2,6,8,True,'this is my set'})
+    # if we have locked 'add' and 'remove' any call to them must wait for the lock to be released
     ms.add(12)
-    # ms.someMethod(99) # all good, its an int
-    # ms.someMethod('oops') # not an int, fail silently
+    ms.someMethod(99) # all good, its an int
+    ms.someMethod('oops') # not an int, fail silently
     print(ms)
     # can we tell if the someMethod is locked?
-    # print( ms.someMethod.__is_locked ) # see an exception
+    print( ms.someMethod.__is_locked ) # True
     print( ms.add.__is_locked ) # True
 
 if __name__ == '__main__':
