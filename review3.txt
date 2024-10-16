@@ -1,0 +1,38 @@
+Review 3 - Profiling and Timing 30 min (until tea break) then carry on for ...
+===============================
+NB for most accurate results, do this is a separate terminal
+For this exercise, use any of the previous review exercises, or my solutions to those exercises,
+or write new code if you prefer (or existing code if you have it)
+
+Apply some timing and profiling to some code
+Profiling might be simple timeit, or memory_profile or cProfile
+
+The most simple approach: go back to previous examples we wrote, and time/profile them
+Then see if there is any way to improve their performance
+This is especially useful to improve the fibonacci code (look online)
+
+For example:
+Gather some memory performance metrics for your existing code
+(use @profile to decorate some of your functions)
+Also measure how long parts of our code take (use timeit.default_timer() )
+Take a baseline average for the code as it is now
+Experiment with alternative solutions to see if their profile can be improved
+For example, in our weather app, use a 'city' generator compared to creating a list of cities
+
+If Time
+-------
+See if any of the 'thread' examples can be written as 'multiprocess' version of those examples
+NB don't expect a significant difference in speed using Threads or using Processes, 
+and in many cases, Threads is the only realistic way to go
+see
+https://stackoverflow.com/questions/2345944/exclude-objects-field-from-pickling-in-python
+Measure time (and profile) to see if there is any difference using multi-processing rather than multi-threading
+
+Optional Additional
+-------------------
+Continue with the weather app from review 2 (your own or my code)
+Write a module called preparation.py which contains some default values 
+e.g which cities, which metrics (temperature, wind-speed etc.) are required etc.
+preparation.py should persist these values in a simple text file
+When the weather app starts, read this text file and use the values
+See how much of a performance hit this is (i/o bound)
