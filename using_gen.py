@@ -19,11 +19,14 @@ for _ in f:
 def tally(incr=1, maxi=False):
     '''This generator will yield an endless tally of values'''
     score = 0
-    while True:
-        yield score # by using yield we have a generator
-        score += incr
-        if maxi and score >= maxi:
-            raise StopIteration # this is the correct way to end a generator
+    try:
+        while True:
+            yield score # by using yield we have a generator
+            score += incr
+            if maxi and score > maxi:
+                raise StopIteration # this is the correct way to end a generator
+    except StopIteration as e:
+        pass
         
 if __name__ == '__main__':
     game = tally(5, 95)
@@ -31,8 +34,5 @@ if __name__ == '__main__':
     print( game.__next__() ) # 0
     print( game.__next__() ) # 5
     print( game.__next__() ) # 10
-    try:
-        for _ in game:
-            print(_, end = ', ')
-    except StopIteration as e:
-        pass
+    for _ in game:
+        print(_, end = ', ')

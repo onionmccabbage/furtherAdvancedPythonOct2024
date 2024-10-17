@@ -67,11 +67,12 @@ Wednesday
 - prepare for Thursday
 
 Thursday
+- complete the custom generator
 - options for Jupyter Notebooks:
   - use Anaconda (NB it is likely you cannot use the free Anaconda within Ericsson)
   - pip install notebook
   - just use existing VSCode (or similar)
-  - use cloud (e.g. colab https://colab.research.google.com/ )
+  - use cloud (e.g. colab https://colab.research.google.com/ or https://jupyter.org/try)
   - or just write NORMAL python modules
 - Python for Data Analysis
   we will need:
