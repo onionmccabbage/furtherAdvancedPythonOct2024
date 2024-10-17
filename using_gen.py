@@ -5,7 +5,7 @@ print(r, type(r))
 
 # a comprehension
 e = [i for i in range(0,100, 2)] # a list (in memory)
-f = (i for i in range(1, 101, 2))# a generator (the values do not exist in memory)
+f = (i*i for i in range(1, 101, 2))# a generator (the values do not exist in memory)
 print(e, type(e))
 print(f, type(f))
 # we may draw values from a generator
