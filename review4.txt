@@ -1,10 +1,14 @@
 Review 4 (Data analysis)
 ========================
 - read in external data (data/flights.csv) into a data frame
+  or https://raw.githubusercontent.com/ismayc/pnwflights14/master/data/flights.csv
 - show the description
 - show the dtypes
 - find the mean flight time
 ‐ Group the data into separate data frames for some airlines (pick a few)
+
+(we will continue after tea break)
+
 In the flights data set, find:
 ‐ The number of flight records
 ‐ The number of unique airlines
