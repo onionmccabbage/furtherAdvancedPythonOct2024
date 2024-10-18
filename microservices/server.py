@@ -8,9 +8,11 @@ def server():
     setup_t = ('localhost', 9876) # IP and port
     server.bind(setup_t)
     # begin listening for clients
-    server.listen()
+    server.listen(4) # this may handle up to 4 concurrent requests
     print(f'Server is listening on {setup_t[0]}:{setup_t[1]}')
-    while True: # kep running
+    while True: # keep running on main thread
+        # we may choose to call a handler function on a new thread
+        # todo
         # we can accept any client request
         (client, addr) = server.accept()
         buf = client.recv(1024) # receive the first 1024 bytes from the client
