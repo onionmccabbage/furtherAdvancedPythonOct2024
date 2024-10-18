@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using Flask as a micro server</title>
+</head>
+<body>
+    <article>
+        <!-- really good practice to use semantic tags for accessibility -->
+        <section>
+            <h3>Lunch Menu</h3>
+            <ul>
+                <li>Salad</li>
+                <li>Fish</li>
+                <li>Aubergine</li>
+            </ul>
+            <aside>
+                <!-- Flask micro-syntax to decide what to render -->
+                {% if dessert != None %}
+                <p>For dessert we have {{dessert}}</p>
+                {% else %}
+                <p>There is no dessert today</p>
+                {% endif %}
+            </aside>
+        </section>
+    </article>
+    
+</body>
+</html>
