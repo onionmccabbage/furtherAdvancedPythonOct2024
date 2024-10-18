@@ -2,6 +2,10 @@
 from flask import Flask
 from flask import render_template
 
+
+# CAUTION: Flask is a development server, NOT production
+# for production, combine Flask with a WSGI-compliant server (Tomcat, Apache...)
+# Recommended fror security etc.
 def main():
     '''here is a simple Flask implementation'''
     app = Flask(__name__)
