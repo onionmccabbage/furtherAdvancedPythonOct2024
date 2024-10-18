@@ -1,6 +1,6 @@
 # microservice is a design pattern
 # break a system into parts each solving a specific problem
-# each service could interacrt with other services
+# each service could interact with other services
 # we often think of microservices as Application Programming Interfaces (API)
 
 import socket # this provides a means for services to interact

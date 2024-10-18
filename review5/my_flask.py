@@ -60,15 +60,21 @@ def weather(city='Athlone'):
     return w.encode() # all data aover HTTP must be encoded
 
 @app.route('/swapi')
-def swapi():
+@app.route('/swapi/<cat>')
+@app.route('/swapi/<cat>/<id>')
+def swapi(cat='people', id=1):
     # CAREFUL unusually, swapi does NOT support www.
-    r = requests.get('https://swapi.dev/api/people/1')
-    response_dict = r.json()
-    name = response_dict['name']
-    return name
-
+    try:
+        r = requests.get(f'https://swapi.dev/api/{cat}/{id}')
+        response_dict = r.json()
+        name = response_dict['name']
+        return name
+    except requests.exceptions.JSONDecodeError as err:
+        return f'{err} try again...'
+    except KeyError as err:
+        return f'{err}'
 
 if __name__ == '__main__':
     # debug=True will live reload on changes
-    app.run(host='127.0.0.1', debug=True)
+    app.run(host='127.0.0.1', debug=True) # NB this debug=True will re-start the server if we change our code
 
