@@ -1,4 +1,4 @@
-Review Exercise: Microservices
+Review Exercise: Microservices complete by 3:30 then show and tell
 ==============================
 Write a microservice that uses 'socket' or 'asyncio'
 (write a new one or extend the existing one)

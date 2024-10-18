@@ -108,7 +108,6 @@ q - run flask as development server (auto restart)
 - after lunch review exercise
 - end of course feedback
   https://apps.powerapps.com/play/17579985-153c-4727-b1f4-8b53e48b5e72?tenantId=92e84ceb-fbfd-47ab-be52-080c6b87953f&Type=ILT&ID=LDIP-539-06396&OID=513348&Title=Further%20Advanced%20Python&Owner=Sachin%20Srivastava%20B
-  
 
 
 
