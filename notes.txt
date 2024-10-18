@@ -95,7 +95,7 @@ Thursday
 > careful: exporting a notebook does not add 'print' statements
 
 Friday
-- data vizualisation with matplotlib
+> data vizualisation with matplotlib
 > statistical analysis and correlation
   REMEMBER: correlation does NOT prove CAUSATION
 - review of microservices (inc. multi threading) and asyncio
