@@ -5,8 +5,11 @@ import threading
 def writeFile(n):
     '''persist n in a byte file'''
     print('writing bytefile')
-    # with ('my_byte_log', 'ab') as fout:
-    #     fout.write(n.encode())
+    with open('my_byte_log', 'ab') as fout:
+        if type(n) == bytes:
+            fout.write(n)
+        elif type(n) == str:
+            fout.write(n.encode)
 
 def server():
     '''This is a simple socket server. It will respond to client requests'''
