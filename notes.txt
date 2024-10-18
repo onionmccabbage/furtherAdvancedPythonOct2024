@@ -99,6 +99,7 @@ Friday
 > statistical analysis and correlation
   REMEMBER: correlation does NOT prove CAUSATION
 - review of microservices (inc. multi threading) and asyncio
+q - finish the byte-write thread example
 - Flask:
   to run as a debug server: flask --app my_flask.py --debug run
   or else debug=True in the app declaration
