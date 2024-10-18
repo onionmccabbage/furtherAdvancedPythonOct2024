@@ -1,0 +1,47 @@
+Review Exercise: Microservices
+==============================
+Write a microservice that uses 'socket' or 'asyncio'
+(write a new one or extend the existing one)
+Respond to requests as follows:
+If the client request is 'people', 'planets', 'vehicles', 'starships' or 'species' then
+server makes a call (using the requests library) to https://swapi.dev/api/<category>/1 
+(where category is validated as one of the above)
+When the data comes back, find just the 'name' value and return that to the client
+Handle 'not found 404' responses
+(NB you will need to include an id for the swapi/api request as shown above)
+
+If the client request can be cast as an integer, make a request to
+  https://swapi.dev/api/people/<int>
+then return some details of that person to the client (e.g. name, eyes, hair height...)
+
+Write a client that sends suitable requests and displays the received server response
+Consider how the server could 'parse' the request to find a category and an id, 
+then use those data to return data for the specified category and id
+
+Alternative Exercise
+====================
+Continue with our Flask server. Add routes for:
+'/swapi/<category>/<id>
+  make a call to swapi and return some data into a template
+if time, also carry on with
+'/weather/<city>'
+  make a call to your weather service and return a nice weather report in a template
+(you could add a weather handler to the microservice socket/asyncio)
+
+Optional
+========
+Add a path to the Flask server which makes a call to your microservice
+Optionally pass arguments for the services on offer
+
+If time
+=======
+Whenever a swapi request is made, populate a class instance
+You could have a 'Swapi' class (includes 'name')
+then 'People', 'Planets', 'Starship' and 'Species' classes inherit from 'Swapi'
+adding properties relevant for each class
+Validate with get/set methods
+
+Then for every sucessful request make further requests for the films
+You could make requests on threads, so they are concurrent
+Show the film names in the response
+

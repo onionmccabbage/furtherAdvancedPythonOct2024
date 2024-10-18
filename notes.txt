@@ -98,10 +98,10 @@ Friday
 > data vizualisation with matplotlib
 > statistical analysis and correlation
   REMEMBER: correlation does NOT prove CAUSATION
-- review of microservices (inc. multi threading) and asyncio
+> review of microservices (inc. multi threading) and asyncio
 > finish the byte-write thread example
 q - run flask as development server (auto restart)
-- Flask:
+> Flask:
   to run as a debug server: flask --app my_flask.py --debug run
   or else debug=True in the app declaration
   see https://flask.palletsprojects.com/en/2.3.x/
