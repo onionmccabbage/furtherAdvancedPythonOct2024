@@ -27,7 +27,10 @@ def main():
         else:
             return 'Welcome to tis Flask server'
     # we may return an HTML template
-
+    @app.route('/lunch')
+    @app.route('/lunch/<dessert>')
+    def lunch(dessert=None):
+        return render_template('lunch.html', dessert=dessert)
     # we must remember to start the server
     app.run()
 
