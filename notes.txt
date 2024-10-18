@@ -12,11 +12,11 @@ Toby Dussek
 
 repo https://github.com/onionmccabbage/furtherAdvancedPythonOct2024
 course website https://s3.eu-west-1.amazonaws.com/neueda.conygre.com/Sites/Ericsson_Further_Advanced_Python/site/index.html
-recording: student Belfast2024 (available for a week or so)
+recordings: student Belfast2024 (available for a week or so)
 
 Monday
 > welcome
-- we will be installing additional packages as needed
+> we will be installing additional packages as needed
 > conventions
   - as will all languages, identifiers can use letters, numbers and underscore (don't start with a number)
   - by convention, ClassesUsePascalCase, methodsUseCamelCase identifiers_use_snake_case
@@ -33,16 +33,16 @@ Monday
 > immediate Python
 > Abstract base class
 > observables and subscribers
-- we will need Jupyter Notebooks later in the week
+> we will need Jupyter Notebooks later in the week
 
 Tuesday
 > how to access the course recordings
 > architectural patterns: inheritance, composition...
 > stateful pattern
-- functional design
+> functional design
 > RxPY https://rxpy.readthedocs.io/en/latest/index.html
        https://rxmarbles.com/
-- concurrency and parallel code
+> concurrency and parallel code
 > the GIL
   see https://realpython.com/python-gil/
 > thread functions and thread classes
@@ -63,8 +63,8 @@ Wednesday
 > performance and timing
 > profiling with @profile and cProfile
 > after lunch review exercise
-- generators
-- prepare for Thursday
+> generators
+> prepare for Thursday
 
 Thursday
 > complete the custom generator
@@ -86,17 +86,17 @@ Thursday
    you can 'pip install jupyter' then start it with 'python -m notebook'
    then you will also need to pip install numpy, pandas etc.
 > numpy and data structures: the arange and array 
-- pandas: series and data-frame
+> pandas: series and data-frame
   NaN, creating stuctures, analysis (stats)
-- data cleansing and preparation
-- descriptive statistics
-- handling files and remote data
-- after lunch review exercise
-- careful: exporting a notebook does not add 'print' statements
+> data cleansing and preparation
+> descriptive statistics
+> handling files and remote data
+> after lunch review exercise
+> careful: exporting a notebook does not add 'print' statements
 
 Friday
 - data vizualisation with matplotlib
-- statistical analysis and correlation
+> statistical analysis and correlation
   REMEMBER: correlation does NOT prove CAUSATION
 - review of microservices (inc. multi threading) and asyncio
 - Flask:
@@ -106,6 +106,10 @@ Friday
 - after lunch review exercise
 - end of course feedback
   
+
+
+
+
 
 Some Websites
    https://www.geeksforgeeks.org/python-design-patterns/
