@@ -1,5 +1,4 @@
 # microservices is a design pattern
-
 import socket
 
 def server():
